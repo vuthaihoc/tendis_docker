@@ -1,0 +1,10 @@
+version: "3"
+services:
+  tendis:
+    image: vuthaihoc/tendis
+    ports:
+     - 8002:51002
+    volumes:
+     - ./tendis_data:/tendis_data
+     - ./scripts/start.sh:/tendis/scripts/start.sh
+    restart: always
