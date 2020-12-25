@@ -3,8 +3,9 @@ services:
   tendis:
     image: vuthaihoc/tendis
     ports:
-     - 8002:51002
+     - 51002:51002
     volumes:
      - ./tendis_data:/tendis_data
      - ./scripts/start.sh:/tendis/scripts/start.sh
+     - ./scripts/tendisplus.conf:/tendis/scripts/tendisplus.conf
     restart: always
